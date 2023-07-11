@@ -1,0 +1,238 @@
+.robot{
+    border: 1px solid black;
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    left: 0px;
+}
+.head{
+    width: 100px;
+    height: 80px;
+    background-color: rgba(73, 45, 65, 0.76);
+    border-radius: 50px 50px 0px 0px;
+    position: absolute;
+    margin-left: 50px;
+}
+.eye1{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(188, 190, 190);
+    border-radius: 100%;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.eye2{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(183, 184, 184);
+    border-radius: 100%;
+    margin-top: 60px;
+    margin-left: 70px;
+}
+.body{
+    width: 100px;
+    height:120px;
+    background-color: rgb(100, 73, 100);
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 90px;
+    border-radius: 0px 0px 25px 25px;
+    overflow: hidden;
+}
+.leg1{
+    width: 25px;
+    height:100px;
+    background-color: rgb(116, 116, 116);
+    position: absolute;
+    border-radius: 0px 0px 50px 50px;
+    z-index: -1;
+    margin-left: 65px;
+    margin-top: 150px;
+
+}
+.leg2{
+    width: 25px;
+    height:100px;
+    background-color: rgb(115, 114, 115);
+    position: absolute;
+    border-radius: 0px 0px 50px 50px;
+    margin-left: 113px;
+    z-index: -1;
+    margin-top: 150px;
+
+}
+.hand1{
+    width: 25px;
+    height:70px;
+    background-color: rgb(122, 121, 121);
+    position: absolute;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+.hand2{
+    width: 25px;
+    height:70px;
+    background-color: rgb(131, 130, 130);
+    position: absolute;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: 155px;
+    margin-top: 100px;
+}
+
+.face:hover {
+    animation: hand 1s infinite;
+  }
+  
+  
+  .robot:hover .hand1{
+    animation: hand1 2s infinite;
+  }
+  
+  .robot:hover .hand2 {
+    animation: hand2 2s infinite;
+  }
+
+  .robot:hover .body {
+    border-radius: 40%;
+    animation: body 2s infinite;
+  }
+  .robot:hover .leg1 {
+    animation: leg1 4s infinite;
+  }
+  
+  .robot:hover .leg2 {
+    animation: leg2 4s infinite;
+  }
+
+  @keyframes head {
+    0% {
+      width: 200px;
+    }
+  
+    25% {
+      width: 300px;
+    }
+  
+    50% {
+      width: 200px;
+    }
+  
+    75% {
+      width: 300px;
+    }
+  
+    100% {
+      width: 200px;
+    }
+  }
+
+  @keyframes hand1 {
+    0% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+ 
+  @keyframes hand2{
+    0% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+
+  @keyframes leg1 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(40deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(40deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes leg2 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-40deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(-40deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+    @keyframes body {
+      from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(360deg);
+      }
+    }
